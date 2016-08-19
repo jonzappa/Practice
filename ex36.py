@@ -25,9 +25,8 @@ tongue and you feel a naseous feeling creep over you as you recite the words,
 chanting faster and faster. Finally after what seems an age but what the moon 
 tells you has only been minutes the stone of the door lets out a deep grinding 
 reverberation and slides to one side."""
-			#room_six()
+			#end_room()
 			room_one()
-			#exit(0)
 		elif choice == "leave":
 			dead("""Typical of your bookish nature, you decide to enlist the aid of a 
 professional when it comes to raiding tombs. As you brush the dust fussily from 
@@ -36,6 +35,8 @@ stammer out a challenge, he cuts your throat in a business-like manner. You fall
 to the ground and feel the life seeping out of your body. Right before you shuffle 
 off this mortal coil the stranger whispers "And thus the secret of the tomb dies 
 with you. May it rest undisturbed for another thousand years.\" """)
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			print """That's not really an option. You're not too great at deciding things,
 are you?"""
@@ -54,10 +55,10 @@ doorways stretching off. Which do you take?"""
 	
 	if choice == "right":
 		room_two()
-		#exit(0)
 	elif choice == "left":
 		room_three()
-		#exit(0)
+	elif choice == "exit":
+			dead("See you soon!")
 	else:
 		print """That's not really an option. You're not too great at deciding things, are
 you?"""
@@ -96,6 +97,8 @@ through the doorway into a long all with steps leading down."""
 			#exit(0)
 		elif choice == "look around":
 			room_two()
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			print "That's not really an option."
 #second room end		
@@ -120,6 +123,8 @@ at the other side of the room. Battered and bruised, but still alive, you start
 walking."""
 			room_four()
 			#exit(0)
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			dead("""Your lack of decisiveness costs you dearly, and you feel the weight of
 several tons of rock pressing down on your for a split second...then you feel nothing at
@@ -182,6 +187,8 @@ to the side and you continue through the doorway."""
 			#exit(0)
 		elif choice == "look around":
 			room_four()
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			print "That's not really an option. You'll have to try something else."
 #fourth room end
@@ -230,6 +237,8 @@ disembark, dust yourself off, and walk through the doorway now revealed before y
 			#exit(0)
 		elif choice == "look around":
 			room_five()
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			print "That's not really an option."
 #fifth room end
@@ -301,8 +310,8 @@ altar."""
 			print """With a scraping thud, the altar moves forward a couple paces and 
 sinks into the floor. Once flush with the floor, a section of the wall slides aside. You
 walk through."""
-			#end_room()
-			exit(0)
+			end_room()
+			#exit(0)
 		elif choice == "press altar" and not rune_2 or not (rune_4 or not rune_5):
 			dead("""You hear a clunk from the altar, but nothing appears to happen. After
 a moment of confusion, you hear a whistling and feel a sting on your neck. Reaching your
@@ -311,11 +320,29 @@ strength leaves your body within seconds. You wind up slumped over the altar, wh
 perhaps where the next intrepid explored will find you centuries hence""")
 		elif choice == "look around":
 			room_six()
+		elif choice == "exit":
+			dead("See you soon!")
 		else:
 			print "That's not really an option."
+#sixth room end
 
 #end room start
-#def end_room():
+def end_room():
+	print """At last, the final burial chamber! You've cemented your place in the history
+books. You look around you at the vast riches that have lain dormant for centuries. Who
+would have thought that you, would have been the one to uncover such untold wealth
+and acclaim? Well, you would have, but no one else! You take a moment to collect yourself,
+then start documenting the tomb and all that it contains."""
+	while True:
+		choice = raw_input("Play again or exit? ")
+		
+		if choice == "play again":
+			start()
+		elif choice == "exit":
+			dead("See you soon!")
+		else:
+			print "You've come this far and you can't make a decision?!"
+#end room end
 
 		
 def dead(why):
