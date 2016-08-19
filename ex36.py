@@ -25,7 +25,6 @@ tongue and you feel a naseous feeling creep over you as you recite the words,
 chanting faster and faster. Finally after what seems an age but what the moon 
 tells you has only been minutes the stone of the door lets out a deep grinding 
 reverberation and slides to one side."""
-			#end_room()
 			room_one()
 		elif choice == "leave":
 			dead("""Typical of your bookish nature, you decide to enlist the aid of a 
@@ -40,7 +39,6 @@ with you. May it rest undisturbed for another thousand years.\" """)
 		else:
 			print """That's not really an option. You're not too great at deciding things,
 are you?"""
-			#exit(0)
 #entrance room end
 
 #first room start
@@ -122,7 +120,6 @@ manage to avoid boulders twice the size of a man to fling yourself through the d
 at the other side of the room. Battered and bruised, but still alive, you start 
 walking."""
 			room_four()
-			#exit(0)
 		elif choice == "exit":
 			dead("See you soon!")
 		else:
@@ -164,7 +161,7 @@ message."""
 		elif choice == "read writing" and legible:
 			print """You re-examine the writing on the door and check your translation.
 You are now positive it reads "The ancient king holds the power, all will bow before
-him."""
+him.\" """
 		elif choice == "search body" and not key:
 			print """You decide to search the only other occupant of the room, the corpse
 in the hollow of the wall. You pause for a moment, feeling slightly ill at the grisliness
@@ -184,7 +181,6 @@ like the meshing of several gears. With a ping and a scrape, the door slides int
 to the side and you continue through the doorway."""
 			unlocked = True
 			room_six()
-			#exit(0)
 		elif choice == "look around":
 			room_four()
 		elif choice == "exit":
@@ -234,7 +230,6 @@ surface of the water, pulsing as if in time to the beating of an unseen heart. D
 by the thought, you jump a little as the boat scrapes itself onto the far shore. You
 disembark, dust yourself off, and walk through the doorway now revealed before you."""
 			room_six()
-			#exit(0)
 		elif choice == "look around":
 			room_five()
 		elif choice == "exit":
@@ -311,7 +306,6 @@ altar."""
 sinks into the floor. Once flush with the floor, a section of the wall slides aside. You
 walk through."""
 			end_room()
-			#exit(0)
 		elif choice == "press altar" and not rune_2 or not (rune_4 or not rune_5):
 			dead("""You hear a clunk from the altar, but nothing appears to happen. After
 a moment of confusion, you hear a whistling and feel a sting on your neck. Reaching your
